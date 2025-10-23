@@ -1,0 +1,120 @@
+.statusContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: var(--primary-offwhite-500);
+}
+
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 192px;
+  width: calc(94% - 542px); /* 192px do menu e 350px do rightboard */ 
+  height: 100%;
+  padding: 24px;
+  align-items: center;
+  gap: 2rem;
+  overflow-y: scroll;
+
+}
+
+.mainContainer::-webkit-scrollbar{
+  display: none;
+}
+
+.dashboardContainer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 95%;
+  min-width: 95%;
+  height: 220px;
+  background-color: var(--secundary-purple-500);;
+  border-radius: 8px;
+
+}
+
+.imageDashboard {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.titleExercices{
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--highlight-black-500);
+  width: calc(100% - 5%);
+}
+
+.graphsWrap {
+  width: calc(100% - 5%);
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.graphContainer {
+  padding: 1rem 1.5rem;
+  width: fit-content;
+  width: 45%;
+  min-width: 400px;
+  min-height: 350px;
+  background-color: var(--white);
+  border-radius: 10px;
+
+  & .title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--highlight-black-500);
+  }
+
+  & .subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--highlight-black-700);
+  }
+
+}
+
+.reverseContainer {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+
+  .mainContainer {
+    margin-left: 0;
+    width: calc(100% - 1rem);
+    padding-inline: 1rem;
+  }
+
+  .statusContainer {
+    flex-direction: column;
+    height: fit-content !important;
+    padding-bottom: 2rem;
+  }
+
+  .dashboardContainer {
+    display: none;
+  }
+
+  .reverseContainer {
+    display: flex;
+    flex-direction: column-reverse !important;
+  }
+
+  .graphsWrap {
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  
+}

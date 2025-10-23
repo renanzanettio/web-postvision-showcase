@@ -1,0 +1,50 @@
+.graphContainer {
+  padding: 1rem 1.5rem;
+  width: fit-content;
+  width: 45%;
+  min-width: 520px;
+  min-height: 350px;
+  max-height: 350px;
+  background-color: var(--white);
+  border-radius: 10px;
+
+  & .title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--highlight-black-500);
+  }
+
+  & .subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--highlight-black-700);
+  }
+
+}
+
+.chart {
+  position: relative;
+  transform: translate(0%, 20%);
+}
+
+.centerText {
+  position: absolute;
+  display: flex;
+  top: 38%;
+  left: 20.5%;
+  min-width: 100px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1b0066;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+@media (max-width: 600px) {
+  .graphContainer {
+    width: 90% !important;
+    transform: scale(0.75) translateX(-15%);
+    margin-top: -50px;
+  }
+}
